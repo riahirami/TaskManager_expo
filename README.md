@@ -27,7 +27,7 @@ This repository contains the source code for a **Task Manager Mobile App** built
 
 - Node.js
 - Yarn or NPM
-- React Native CLI or Expo CLI (depending on how you're running the app)
+- Expo CLI (depending on how you're running the app)
 
 ### Clone the repository
 
