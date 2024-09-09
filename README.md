@@ -7,6 +7,7 @@
 - [Installation](#installation)
 - [Running the App](#running-the-app)
 - [Tech Stack](#tech-stack)
+- [Backend modification](#backend-modification)
 
 ## Overview
 
@@ -57,10 +58,24 @@ ensure that the provided API on the server
 
 ### Tech Stack
 
-React Native: Cross-platform mobile framework.
-Redux Toolkit Query (RTK Query): For managing API state.
-Formik & Yup: Form management and validation.
-React Navigation: Navigation across screens.
-SQLite / Node.js: Backend database and API.
-JWT: Secure user authentication.
-DraggableFlatList: Drag-and-drop task management.
+-React Native: Cross-platform mobile framework.
+-Redux Toolkit Query (RTK Query): For managing API state.
+-Formik & Yup: Form management and validation.
+-React Navigation: Navigation across screens.
+-SQLite / Node.js: Backend database and API.
+-JWT: Secure user authentication.
+-DraggableFlatList: Drag-and-drop task management.
+
+### Backend modification
+
+- Endpoint added to can mark tasks as complete/incomplete
+
+- **Update Task status:**
+  - **Method:** `PUT`
+  - **URL:** `'/tasks/:id/status'`
+  - **Body:**
+    ```json
+    {
+      "status": "complete | incomplete"
+    }
+    ```
