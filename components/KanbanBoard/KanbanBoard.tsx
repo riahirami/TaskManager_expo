@@ -1,9 +1,10 @@
-import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View } from 'react-native';
+import DraggableFlatList from 'react-native-draggable-flatlist';
 import { Task } from '../../models/Tasks/Task';
-
 import TaskCard from '../TaskCard/TaskCard';
 import styles from './kanbanBoardStyles';
+
 interface KanbanBoardProps {
   tasks: Task[];
   updateTaskStatus: (task: Task) => void;
@@ -26,20 +27,63 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({
   removeTask
 }) => {
   // Filter tasks by status
-  const incompleteTasks = tasks.filter((task) => task.status === 'incomplete');
-  const completedTasks = tasks.filter((task) => task.status === 'completed');
+  const [incompleteTasks, setIncompleteTasks] = useState(
+    tasks.filter((task) => task.status === 'incomplete')
+  );
+  const [completedTasks, setCompletedTasks] = useState(
+    tasks.filter((task) => task.status === 'completed')
+  );
+
+  const onDragEnd = ({
+    data,
+    from,
+    to
+  }: {
+    data: Task[];
+    from: number;
+    to: number;
+  }) => {
+    // If the task is moved across columns, update the status
+    if (from !== to) {
+      const draggedTask = data[to];
+      const newStatus =
+        to >= incompleteTasks.length ? 'completed' : 'incomplete';
+
+      updateTaskStatus({ ...draggedTask, status: newStatus });
+
+      if (newStatus === 'completed') {
+        setIncompleteTasks((prev) =>
+          prev.filter((task) => task.id !== draggedTask.id)
+        );
+        setCompletedTasks((prev) => [
+          ...prev,
+          { ...draggedTask, status: newStatus }
+        ]);
+      } else {
+        setCompletedTasks((prev) =>
+          prev.filter((task) => task.id !== draggedTask.id)
+        );
+        setIncompleteTasks((prev) => [
+          ...prev,
+          { ...draggedTask, status: newStatus }
+        ]);
+      }
+    }
+  };
 
   return (
     <View style={styles.kanbanContainer}>
       {/* Incomplete Tasks */}
       <View style={styles.kanbanColumn}>
         <Text style={styles.kanbanTitle}>Incomplete Tasks</Text>
-        <FlatList
+        <DraggableFlatList
           data={incompleteTasks}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
+          onDragEnd={onDragEnd}
+          renderItem={({ item, drag }) => (
             <TaskCard
               task={item}
+              drag={drag}
               updateTaskStatusAction={updateTaskStatus}
               editTask={editTask}
               removeTask={removeTask}
@@ -56,12 +100,14 @@ const KanbanBoard: React.FC<KanbanBoardProps> = ({
       {/* Completed Tasks */}
       <View style={styles.kanbanColumn}>
         <Text style={styles.kanbanTitle}>Completed Tasks</Text>
-        <FlatList
+        <DraggableFlatList
           data={completedTasks}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
+          onDragEnd={onDragEnd}
+          renderItem={({ item, drag }) => (
             <TaskCard
               task={item}
+              drag={drag}
               updateTaskStatusAction={updateTaskStatus}
               editTask={editTask}
               removeTask={removeTask}

@@ -24,17 +24,19 @@ export default StyleSheet.create({
   },
   taskDetailsContainer: { flex: 1, gap: 12 },
   taskName: {
-    fontFamily: fonts.INTER_REGULAR,
+    fontFamily: fonts.INTER_BOLD,
     fontSize: 20,
-    fontWeight: 'bold'
+    flexWrap: 'nowrap'
   },
   taskDescription: {
     fontFamily: fonts.INTER_NORMAL,
-    fontSize: 16
+    fontSize: 16,
+    flexWrap: 'nowrap'
   },
   statusText: {
     fontSize: 16,
-    fontFamily: fonts.INTER_BOLD
+    fontFamily: fonts.INTER_BOLD,
+    flexWrap: 'nowrap'
   },
   projectItem: {
     margin: 10,

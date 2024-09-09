@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import { Task } from '../../../models/Tasks/Task';
-import { upperCaseFirstLetter } from '../../../utils/helpers';
-import ScreenHeader from '../../ScreenHeader/ScreenHeader';
+import ScreenHeader from '../../components/ScreenHeader/ScreenHeader';
+import { Task } from '../../models/Tasks/Task';
+import { upperCaseFirstLetter } from '../../utils/helpers';
 import styles from './taskDetailsStyles';
 /**
  * Represents TaskDetails screen ui

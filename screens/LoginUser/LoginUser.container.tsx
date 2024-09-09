@@ -1,21 +1,21 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Alert } from 'react-native';
-import { User } from '../../../models/User/User';
-import { WrapperStackParamList } from '../../../navigation/WrapperStackNavigation/WrapperStackNavigation';
-import { useLoginMutation } from '../../../store/api/authApi';
-import { setUserLoggedIn } from '../../../store/features/global/globalSlice';
+import { User } from '../../models/User/User';
+import { WrapperStackParamList } from '../../navigation/WrapperStackNavigation/WrapperStackNavigation';
+import { useLoginMutation } from '../../store/api/authApi';
+import { setUserLoggedIn } from '../../store/features/global/globalSlice';
 import {
   setLoaderInvisible,
   setLoaderVisible
-} from '../../../store/features/loader/loaderSlice';
-import { useAppDispatch } from '../../../store/hooks';
+} from '../../store/features/loader/loaderSlice';
+import { useAppDispatch } from '../../store/hooks';
 import {
   HOME_SCREEN,
   LOGIN_USER_SCREEN,
   REGISTER_USER_SCREEN
-} from '../../../utils/screenNames';
-import { setAccessToken } from '../../../utils/storage';
+} from '../../utils/screenNames';
+import { setAccessToken } from '../../utils/storage';
 import LoginScreen from './LoginUser';
 
 interface loginUserContainerProps

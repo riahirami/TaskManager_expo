@@ -2,8 +2,8 @@ import React from 'react';
 
 import { type NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { WrapperStackParamList } from '../../../navigation/WrapperStackNavigation/WrapperStackNavigation';
-import { TASK_DETAILS_SCREEN } from '../../../utils/screenNames';
+import { WrapperStackParamList } from '../../navigation/WrapperStackNavigation/WrapperStackNavigation';
+import { TASK_DETAILS_SCREEN } from '../../utils/screenNames';
 import TaskDetails from './TaskDetails';
 
 /**

@@ -1,18 +1,18 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Alert } from 'react-native';
-import { User } from '../../../models/User/User';
-import { WrapperStackParamList } from '../../../navigation/WrapperStackNavigation/WrapperStackNavigation';
-import { useRegisterMutation } from '../../../store/api/authApi';
+import { User } from '../../models/User/User';
+import { WrapperStackParamList } from '../../navigation/WrapperStackNavigation/WrapperStackNavigation';
+import { useRegisterMutation } from '../../store/api/authApi';
 import {
   setLoaderInvisible,
   setLoaderVisible
-} from '../../../store/features/loader/loaderSlice';
-import { useAppDispatch } from '../../../store/hooks';
+} from '../../store/features/loader/loaderSlice';
+import { useAppDispatch } from '../../store/hooks';
 import {
   LOGIN_USER_SCREEN,
   REGISTER_USER_SCREEN
-} from '../../../utils/screenNames';
+} from '../../utils/screenNames';
 import RegisterUser from './RegisterUser';
 
 interface registerUserContainerProps

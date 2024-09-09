@@ -1,12 +1,12 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
-import EditProjectContainer from '../../components/screens/EditProject/EditProject.container';
-import EditTaskContainer from '../../components/screens/EditTask/EditTask.container';
-import HomeContainer from '../../components/screens/Home/Home.container';
-import ProjectTasksContainer from '../../components/screens/ProjectTasks/ProjectTasks.container';
-import TaskDetailsContainer from '../../components/screens/TaskDetails/TaskDetails.container';
 import { Project } from '../../models/projects/Project';
 import { Task } from '../../models/Tasks/Task';
+import EditProjectContainer from '../../screens/EditProject/EditProject.container';
+import EditTaskContainer from '../../screens/EditTask/EditTask.container';
+import HomeContainer from '../../screens/Home/Home.container';
+import ProjectTasksContainer from '../../screens/ProjectTasks/ProjectTasks.container';
+import TaskDetailsContainer from '../../screens/TaskDetails/TaskDetails.container';
 import {
   EDIT_PROJECT_SCREEN,
   EDIT_TASK_SCREEN,

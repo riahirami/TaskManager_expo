@@ -3,25 +3,25 @@ import React, { useEffect, useState } from 'react';
 import { type NativeStackScreenProps } from '@react-navigation/native-stack';
 
 import { Alert } from 'react-native';
-import { TaskStatusEnum } from '../../../enum/global';
-import { Task } from '../../../models/Tasks/Task';
-import { WrapperStackParamList } from '../../../navigation/WrapperStackNavigation/WrapperStackNavigation';
+import { TaskStatusEnum } from '../../enum/global';
+import { Task } from '../../models/Tasks/Task';
+import { WrapperStackParamList } from '../../navigation/WrapperStackNavigation/WrapperStackNavigation';
 import {
   useCreateTaskMutation,
   useDeleteTaskMutation,
   useLazyGetTaskListQuery,
   useUpdateTaskStatusMutation
-} from '../../../store/api/tasksApi';
+} from '../../store/api/tasksApi';
 import {
   setLoaderInvisible,
   setLoaderVisible
-} from '../../../store/features/loader/loaderSlice';
-import { useAppDispatch } from '../../../store/hooks';
+} from '../../store/features/loader/loaderSlice';
+import { useAppDispatch } from '../../store/hooks';
 import {
   EDIT_TASK_SCREEN,
   PROJECT_TASKS_SCREEN,
   TASK_DETAILS_SCREEN
-} from '../../../utils/screenNames';
+} from '../../utils/screenNames';
 import ProjectTasks from './ProjectTasks';
 
 /**

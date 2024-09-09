@@ -4,9 +4,9 @@ import { Formik } from 'formik';
 import React from 'react';
 import { Text, TextInput, View } from 'react-native';
 import * as Yup from 'yup';
-import { Task } from '../../../models/Tasks/Task';
-import CustomButton from '../../CustomButton/CustomButton';
-import ScreenHeader from '../../ScreenHeader/ScreenHeader';
+import CustomButton from '../../components/CustomButton/CustomButton';
+import ScreenHeader from '../../components/ScreenHeader/ScreenHeader';
+import { Task } from '../../models/Tasks/Task';
 
 // Validation schema using Yup
 const ProjectSchema = Yup.object().shape({

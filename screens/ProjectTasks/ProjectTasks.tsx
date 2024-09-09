@@ -1,15 +1,15 @@
 import React from 'react';
 import { FlatList, Switch, Text, View } from 'react-native';
-import { Task } from '../../../models/Tasks/Task';
-import TaskCard from '../../TaskCard/TaskCard';
+import { Task } from '../../models/Tasks/Task';
 
-import { colors } from '../../../utils/colors';
-import { NO_TASKS } from '../../../utils/constants';
-import { upperCaseFirstLetter } from '../../../utils/helpers';
-import CustomListEmpty from '../../CustomListEmpty/CustomListEmpty';
-import FormModalTask from '../../FormModalTask/FormModalTask';
-import KanbanBoard from '../../KanbanBoard/KanbanBoard';
-import ScreenHeader from '../../ScreenHeader/ScreenHeader';
+import CustomListEmpty from '../../components/CustomListEmpty/CustomListEmpty';
+import FormModalTask from '../../components/FormModalTask/FormModalTask';
+import KanbanBoard from '../../components/KanbanBoard/KanbanBoard';
+import ScreenHeader from '../../components/ScreenHeader/ScreenHeader';
+import TaskCard from '../../components/TaskCard/TaskCard';
+import { colors } from '../../utils/colors';
+import { NO_TASKS } from '../../utils/constants';
+import { upperCaseFirstLetter } from '../../utils/helpers';
 import styles from './projectTasksStyles';
 /**
  * Represents ProjectTasks screen ui
@@ -118,8 +118,7 @@ const ProjectTasks: React.FC<ProjectTasksProps> = ({
               addTask={addTask}
               updateTaskStatusAction={updateTaskStatusAction}
               editTask={editTask}
-              removeTask={removeTask}
-            />
+              removeTask={removeTask} drag={undefined}            />
           )}
           ListEmptyComponent={<CustomListEmpty text={NO_TASKS} />}
         />

@@ -1,9 +1,9 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { Alert } from 'react-native';
-import { WrapperStackParamList } from '../../../navigation/WrapperStackNavigation/WrapperStackNavigation';
-import { useUpdateTaskMutation } from '../../../store/api/tasksApi';
-import { EDIT_TASK_SCREEN } from '../../../utils/screenNames';
+import { WrapperStackParamList } from '../../navigation/WrapperStackNavigation/WrapperStackNavigation';
+import { useUpdateTaskMutation } from '../../store/api/tasksApi';
+import { EDIT_TASK_SCREEN } from '../../utils/screenNames';
 import EditProject from './EditTask';
 
 interface EditTaskContainerProps

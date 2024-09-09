@@ -17,10 +17,12 @@ interface TaskCardProps {
   removeTask: (id: string) => void;
   isModalVisible: boolean;
   setModalVisible: (value: boolean) => void;
+  drag: any;
 }
 
 const TaskCard: React.FC<TaskCardProps> = ({
   task,
+  drag,
   navigateToTaskDetails,
   addTask,
   editTask,
@@ -60,7 +62,7 @@ const TaskCard: React.FC<TaskCardProps> = ({
         />
       )}
 
-      <Pressable onPress={() => navigateToTaskDetails(task)}>
+      <Pressable onPress={() => navigateToTaskDetails(task)} onLongPress={drag}>
         <View style={styles.innerContainer}>
           <View style={styles.taskDetailsContainer}>
             <Text style={styles.taskName}>{task.title}</Text>

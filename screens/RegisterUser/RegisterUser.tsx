@@ -2,8 +2,8 @@ import { Formik } from 'formik';
 import React from 'react';
 import { Image, Text, TextInput, View } from 'react-native';
 import * as Yup from 'yup';
-import { icons } from '../../../utils/icons';
-import CustomButton from '../../CustomButton/CustomButton';
+import CustomButton from '../../components/CustomButton/CustomButton';
+import { icons } from '../../utils/icons';
 import { styles } from './registerUserStyles';
 
 interface RegisterValues {

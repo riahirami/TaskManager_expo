@@ -1,22 +1,22 @@
 import { type NativeStackScreenProps } from '@react-navigation/native-stack';
 import React, { useEffect, useState } from 'react';
 import { Alert } from 'react-native';
-import { Project } from '../../../models/projects/Project';
-import { WrapperStackParamList } from '../../../navigation/WrapperStackNavigation/WrapperStackNavigation';
+import { Project } from '../../models/projects/Project';
+import { WrapperStackParamList } from '../../navigation/WrapperStackNavigation/WrapperStackNavigation';
 import {
   useCreateProjectMutation,
   useLazyGetProjectListQuery
-} from '../../../store/api/tasksApi';
+} from '../../store/api/tasksApi';
 import {
   setLoaderInvisible,
   setLoaderVisible
-} from '../../../store/features/loader/loaderSlice';
-import { useAppDispatch } from '../../../store/hooks';
+} from '../../store/features/loader/loaderSlice';
+import { useAppDispatch } from '../../store/hooks';
 import {
   EDIT_PROJECT_SCREEN,
   HOME_SCREEN,
   PROJECT_TASKS_SCREEN
-} from '../../../utils/screenNames';
+} from '../../utils/screenNames';
 import Home from './Home';
 
 /**

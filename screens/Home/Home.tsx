@@ -1,11 +1,11 @@
 import React from 'react';
 import { FlatList, Text, View } from 'react-native';
-import { Project } from '../../../models/projects/Project';
-import { NO_PROJECTS } from '../../../utils/constants';
-import CustomButton from '../../CustomButton/CustomButton';
-import FormModal from '../../FormModal/FormModal';
-import ProjectCard from '../../ProjectCard/ProjectCard';
-import ScreenHeader from '../../ScreenHeader/ScreenHeader';
+import { Project } from '../../models/projects/Project';
+import { NO_PROJECTS } from '../../utils/constants';
+import CustomButton from '../../components/CustomButton/CustomButton';
+import FormModal from '../../components/FormModal/FormModal';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import ScreenHeader from '../../components/ScreenHeader/ScreenHeader';
 import { styles } from './homeStyles';
 type HomeScreenProps = {
   data: Project[] | undefined;
