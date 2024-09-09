@@ -54,7 +54,7 @@ yarn install
 npm start
 ```
 
-ensure that the provided API on the server
+Please ensure that the provided API on the server has been run.
 
 ### Tech Stack
 
@@ -68,7 +68,7 @@ ensure that the provided API on the server
 
 ### Backend modification
 
-- Endpoint added to can mark tasks as complete/incomplete
+- Endpoint added to mark tasks as complete/incomplete
 
 - **Update Task status:**
   - **Method:** `PUT`
