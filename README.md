@@ -6,25 +6,18 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Running the App](#running-the-app)
-- [Backend Setup](#backend-setup)
 - [Tech Stack](#tech-stack)
-- [Drag & Drop Kanban](#drag--drop-kanban)
-- [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
-This repository contains the source code for a **Task Manager Mobile App** built using React Native with a **Kanban** and **list view** for tasks. It allows users to create, edit, delete, and update tasks using drag-and-drop functionality in the Kanban view. Additionally, the app features push notifications, task prioritization, and user authentication using JWT tokens.
+This repository contains the source code for a **Task Manager Mobile App** built using React Native with a **Kanban** and **list view** for tasks. It allows users to create, edit projects, and create tasks delete, and update tasks. The authenticated use can change the status of the task to make it complete or incomplete.
 
 ## Features
 
 - **User Authentication:** Register, login, and authentication using JWT.
+- **Project Management:** Create, edit, project.
 - **Task Management:** Create, edit, delete tasks.
 - **Drag & Drop Kanban:** Drag tasks between "Incomplete" and "Completed" columns in the Kanban view.
-- **Task Prioritization:** Assign and manage task priorities.
-- **Push Notifications:** Real-time notifications for task updates.
 - **API Integration:** Fully functional backend API for managing tasks and projects.
 
 ## Installation
