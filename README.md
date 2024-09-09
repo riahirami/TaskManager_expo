@@ -58,13 +58,13 @@ Please ensure that the provided API on the server has been run.
 
 ### Tech Stack
 
--React Native: Cross-platform mobile framework.
--Redux Toolkit Query (RTK Query): For managing API state.
--Formik & Yup: Form management and validation.
--React Navigation: Navigation across screens.
--SQLite / Node.js: Backend database and API.
--JWT: Secure user authentication.
--DraggableFlatList: Drag-and-drop task management.
+- React Native: Cross-platform mobile framework.
+- Redux Toolkit Query (RTK Query): For managing API state.
+- Formik & Yup: Form management and validation.
+- React Navigation: Navigation across screens.
+- SQLite / Node.js: Backend database and API.
+- JWT: Secure user authentication.
+- DraggableFlatList: Drag-and-drop task management.
 
 ### Backend modification
 
